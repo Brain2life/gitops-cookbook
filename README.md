@@ -21,3 +21,6 @@ Collection of projects based on GitOps approach
 - **Auditability** (you know who changed what and when)
 - **Automation** (CI/CD pipelines and auto-sync)
 - **Rollback** by reverting a Git commit
+
+## Projects
+- [Demo of deploying Flux operator into Minikube cluster and connecting it to the Github repository](https://github.com/Brain2life/flux-demo)
