@@ -24,3 +24,6 @@ Collection of projects based on GitOps approach
 
 ## Projects
 - [Demo of deploying Flux operator into Minikube cluster and connecting it to the Github repository](https://github.com/Brain2life/flux-demo)
+
+## References
+- [O'Reilly GitOps Cookbook repository: github.com/gitops-cookbook](https://github.com/gitops-cookbook)
