@@ -27,3 +27,4 @@ Collection of projects based on GitOps approach
 
 ## References
 - [O'Reilly GitOps Cookbook repository: github.com/gitops-cookbook](https://github.com/gitops-cookbook)
+- [OpenGitOps: GitOps Principles v1.0.0](https://opengitops.dev/)
