@@ -16,6 +16,13 @@ Collection of projects based on GitOps approach
 
 ![](./img/gitops_workflow.png)
 
+### Core Principles of GitOps
+
+- A system managed by GitOps must have its desired state expressed declaratively.
+- Desired state is stored in a way that enforces immutability, versioning and retains a complete version history.
+- Software agents automatically pull the desired state declarations from the source.
+- Software agents continuously observe actual system state and attempt to apply the desired state.
+
 ### Key Benefits:
 - **Version control** for everything
 - **Auditability** (you know who changed what and when)
