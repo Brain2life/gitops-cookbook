@@ -23,7 +23,9 @@ Collection of projects based on GitOps approach
 - **Rollback** by reverting a Git commit
 
 ## Projects
+- [Basics of ArgoCD](./argocd-intro/)
 - [Demo of deploying Flux operator into Minikube cluster and connecting it to the Github repository](https://github.com/Brain2life/flux-demo)
+- [Tetris game app deployment via ArgoCD and GitHub](./argocd-app-deployment/)
 
 ## References
 - [O'Reilly GitOps Cookbook repository: github.com/gitops-cookbook](https://github.com/gitops-cookbook)
