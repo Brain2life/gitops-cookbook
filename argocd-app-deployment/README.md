@@ -1,5 +1,7 @@
 # Deploying an application with ArgoCD
 
+This demo project demonstrates how to deploy a sample Teris game app to EKS cluster by using ArgoCD UI
+
 ## ArgoCD overview
 
 [Argo CD](https://argoproj.github.io/cd/) is a declarative, GitOps continuous delivery tool for Kubernetes. Argo CD controller in Kubernetes cluster continuously monitors the state of your cluster and compares it with the desired state defined in Git. If the cluster state does not match the desired state, Argo CD reports the deviation and provides visualizations to help developers manually or automatically sync the cluster state with the desired state.
@@ -397,6 +399,21 @@ syncOptions:
 
 For more information about available settings, see [User Guide](https://argo-cd.readthedocs.io/en/stable/user-guide/)
 
+5. Next, define GitHub source settings. In this case, as GitHub source repository is public, you don't need to configure any authentication options. ArgoCD will pick up the repository and the required path automaically:
+
+![](../img/argocd_path_to_app.png)
+
+6. Then, setup the Destination settings. It means setting the access to Kubernetes Cluster, where tetris game app will be deployed. `https://kubernetes.default.svc` setting is used when we are deploying the application on the same cluster where Argo CD is deployed (not recommended for production). The namespace `tetris` will be created automatically by ArgoCD.
+
+![](../img/argocd_destination_settings.png)
+
+7. Now deploy the app and observe the sync status:
+
+![](../img/argocd_tetris_deployment.png)
+
+8. Check the ArgoCD sync feature workings by changing the service type of the app to `LoadBalancer` type. To access the app go to `http://<load_balancer_public_url>`:
+
+![](../img/deployed_app_argocd.png)
 
 ## References
 - [EKS Workshop: ArgoCD](https://www.eksworkshop.com/docs/automation/gitops/argocd/)
