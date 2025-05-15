@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tetris-game
+  labels:
+    app: tetris-game
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tetris-game
+  template:
+    metadata:
+      labels:
+        app: tetris-game
+    spec:
+      containers:
+        - name: tetris
+          image: makbanov/tetris-game:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 100m
+              memory: 128Mi
+          # Optional: Uncomment if you want health checks
+          # livenessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: 80
+          #   initialDelaySeconds: 5
+          #   periodSeconds: 10
+          # readinessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: 80
+          #   initialDelaySeconds: 5
+          #   periodSeconds: 5
