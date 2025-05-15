@@ -1,6 +1,6 @@
 # Deploying an application with ArgoCD
 
-This demo project demonstrates how to deploy a sample Teris game app to EKS cluster by using ArgoCD UI
+This demo project demonstrates how to deploy a sample Tetris game app to EKS cluster by using ArgoCD UI
 
 ## ArgoCD overview
 
