@@ -5,12 +5,11 @@ metadata:
   labels:
     app: tetris-game
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: tetris-game
   ports:
     - name: http
       protocol: TCP
-      port: 80          # Service port (cluster-internal)
-      targetPort: 80    # Container port
-      nodePort: 32000   # Node port exposed externally
+      port: 80          # Cluster-internal service port
+      targetPort: 80    # Container port exposed by the pod
